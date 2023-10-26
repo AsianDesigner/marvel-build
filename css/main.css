@@ -25,8 +25,17 @@ header {
     margin: 0px auto;
 }
 
+#character_nav {
+    background-color: #675050;
+    background-image: url('../images/characters_art_mas_mob_01.jpeg');
+    background-blend-mode: hard-light;
+}
+
 .characters {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
 }
 
@@ -36,4 +45,96 @@ header {
     background-color: black;
     text-align: left;
     cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 155px 0 0 rgb(255,0,0) inset;
 }
+
+.characters li:hover {
+    box-shadow: 0 220px 0 0 rgb(255, 0, 0) inset;
+}
+
+.characters li h5 {
+    color: #fff; 
+    padding: 12px 8px;
+}
+
+.characters li a {
+    text-decoration: none;
+}
+
+/*---Sprite---*/
+
+.sprite {
+    width: 150px;
+    height: 150px;
+    background-image: url('../images/marvelSprites.jpg');
+
+}
+
+
+#carol {
+    background-position: -150px 0;  
+}
+
+#clint {
+    background-position: -300px 0;
+}
+
+#hulk {
+    background-position: -450px 0;
+}
+
+#thor {
+    background-position: -600px 0;
+}
+
+#widow {
+    background-position: -750px 0;
+}
+
+#cap:hover, #carol:hover, #clint:hover, #hulk:hover, #thor:hover, #widow:hover {
+    background-position-y: -150px;
+}
+
+/*---Footer Rules---*/
+footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+/*---Flex Box
+display, flex-direction, justify-content, align-items
+
+Container(parent) & items(children)
+
+flip the entire websiite using axis
+
+Block, behaves as expected taking up 100% of the inline space only taking up
+what is needed
+
+display: inline flex
+
+flex-direction: row, row-reverse, column, column reverse
+
+align-items (makes everything the same height)
+
+align-items: flex-start, flex-end, center, baseline, stretch
+(and then add height)
+
+justify-content: space-evenly
+(so even when you add more containers it automatically evens out the space)
+
+mdn css transitions
+
+Background Blend Mode
+Blends Modes: Normal, Multiply (darkens), Screen (lightens colors)
+
+background-blend-mode: multiple;
+
+background-size: cover; (scales image, preserving ratio, the image is cropped)
+
+
+
+---*/
